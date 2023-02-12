@@ -41,3 +41,4 @@ jobs:
       uses: docker://dependabot/dependabot-core:latest
       env:
         GITHUB_TOKEN: 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
+        permissions: read-all|write-all
