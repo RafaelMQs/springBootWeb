@@ -38,15 +38,15 @@ jobs:
       uses: advanced-security/maven-dependency-submission-action@v2.0.1
     
     dependabot:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-    - name: Run Dependabot
-      uses: dependabot/actions/check@v2
+      runs-on: ubuntu-latest
+      needs: test
+      steps:
+      - name: Run Dependabot
+        uses: dependabot/actions/check@v2
 
-    - name: Send alert
-      uses: dependabot/actions/notify@v1
-      with:
-        repo-token: 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
-        message: "ALERT !!! Dependabot found a security vulnerability and a pull request was generated to resolve it."
+      - name: Send alert
+        uses: dependabot/actions/notify@v1
+        with:
+          repo-token: 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
+          message: "ALERT !!! Dependabot found a security vulnerability and a pull request was generated to resolve it."
   
